@@ -8,12 +8,12 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 # Add an argument for cache busting
-ARG CACHE_BUSTING_ARG=1
+#ARG CACHE_BUSTING_ARG=1
 
 # Use the cache-busting argument in the wget URL to avoid Docker layer cache
-RUN wget -q -O medusa-config.ts "https://raw.githubusercontent.com/chillpilllike/green/refs/heads/main/medusa-config.ts?${CACHE_BUSTING_ARG}"
+#RUN wget -q -O medusa-config.ts "https://raw.githubusercontent.com/chillpilllike/green/refs/heads/main/medusa-config.ts?${CACHE_BUSTING_ARG}"
 
-RUN wget -q -O package.json https://raw.githubusercontent.com/chillpilllike/green/refs/heads/main/package.json
+#RUN wget -q -O package.json https://raw.githubusercontent.com/chillpilllike/green/refs/heads/main/package.json
 
 RUN yarn global add @medusajs/medusa-cli 
 
