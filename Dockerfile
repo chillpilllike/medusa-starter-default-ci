@@ -27,8 +27,6 @@ RUN yarn
 
 # Copy the rest of the application code
 
-RUN rm -rf .medusa/server
-
 # Build the Medusa application
 RUN yarn build
 
